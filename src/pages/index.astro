@@ -2,7 +2,6 @@
 // index.astro
 import Layout from '../layouts/Layout.astro';
 import ProductCard from '../components/ProductCard.astro';
-import InteractiveYomi from '../components/InteractiveYomi.astro';
 
 const featuredProducts = [
   {
@@ -78,7 +77,7 @@ const featuredProducts = [
             探索旗下產品
           </a>
           <a 
-            href="mailto:cs.jian@triodose.com" 
+            href="mailto:triodose@mrandmrsjian.com" 
             class="inline-flex items-center justify-center rounded-full border border-slate-350 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm transition-all hover:bg-slate-50"
           >
             聯絡我們
@@ -177,19 +176,6 @@ const featuredProducts = [
     </div>
   </section>
 
-  <!-- Embedded Live Simulator Section -->
-  <section class="py-20 bg-slate-950 text-white relative">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="text-3xl font-bold">產品搶先玩：YomiYomi 互動體驗區</h2>
-        <p class="mt-3 text-slate-400 text-xs">
-          在下方模擬器上直接體驗 AI 日文新聞助手的彩色語意分析、丁寧體與常體一鍵切換與智慧注音！
-        </p>
-      </div>
-      
-      <InteractiveYomi />
-    </div>
-  </section>
 
   <!-- Studio Slogan Banner -->
   <section class="py-20 bg-gradient-to-r from-brand-mint/10 via-brand-yellow/10 to-brand-orange/10 text-slate-900 border-t border-slate-100">

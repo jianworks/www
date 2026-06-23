@@ -14,7 +14,7 @@ interface Props {
 const { title, subtitle, description, tag, tagColor, link, imageSrc, slogan } = Astro.props;
 ---
 
-<div class="group relative flex flex-col overflow-hidden rounded-3xl bg-white border border-slate-100 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
+<a href={link} class="group relative flex flex-col overflow-hidden rounded-3xl bg-white border border-slate-100 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
   <!-- Top decorative color block -->
   <div class="h-2 w-full bg-gradient-to-r from-brand-mint via-brand-yellow to-brand-orange opacity-80 group-hover:opacity-100 transition-opacity"></div>
   
@@ -46,18 +46,5 @@ const { title, subtitle, description, tag, tagColor, link, imageSrc, slogan } = 
     <p class="text-sm text-slate-500 mt-3 leading-relaxed flex-grow">
       {description}
     </p>
-
-    <!-- Bottom link button -->
-    <div class="mt-6 pt-4 border-t border-slate-50 flex items-center justify-between">
-      <a 
-        href={link} 
-        class="inline-flex items-center text-sm font-semibold text-slate-900 group-hover:text-brand-orange transition-colors"
-      >
-        查看詳細規格 
-        <svg class="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-        </svg>
-      </a>
-    </div>
   </div>
-</div>
+</a>
