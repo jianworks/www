@@ -34,7 +34,7 @@ import Layout from '../../layouts/Layout.astro';
               Android 版免費下載 (Google Play)
             </a>
             <a href="#specifications" class="inline-flex items-center justify-center rounded-xl border border-slate-700 px-6 py-3 text-xs font-semibold text-slate-300 hover:bg-slate-800 transition-colors">
-              技術規格與功能
+              功能特色
             </a>
           </div>
         </div>
@@ -92,7 +92,7 @@ import Layout from '../../layouts/Layout.astro';
   <section id="specifications" class="py-16 bg-white">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-slate-900">核心功能技術規格</h2>
+        <h2 class="text-3xl font-bold text-slate-900">功能特色</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -159,37 +159,5 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Database Schema Tech Info -->
-  <section class="py-16 bg-slate-900 text-white border-t border-slate-800">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-      <div class="text-center mb-10">
-        <h2 class="text-2xl font-bold">後端資料庫架構 (Supabase / PostgreSQL)</h2>
-        <p class="text-slate-400 text-xs mt-2">空間地理資料庫 PostGIS 核心欄位配置</p>
-      </div>
 
-      <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 overflow-x-auto text-xs font-mono space-y-4">
-        <div>
-          <p class="text-brand-orange font-bold text-sm mb-2">// 裝飾品點位資料表 (decor_spots)</p>
-          <p class="text-slate-400">
-            - `latitude`, `longitude`: 經緯度座標雙精度浮點數<br />
-            - `geom`: geometry (Point, 4326) PostGIS 空間地理座標點（綁定 GIST 索引提供快速空間查詢）<br />
-            - `decor_type`: 飾品代碼 (如: "restaurant", "cafe")<br />
-            - `score`: 當前純點準確百分比 (預設 100)<br />
-            - `vote_count`: 總投票次數 (預設 0)<br />
-            - `reporter_id`: 回報者的裝置 UUID (防刷唯一驗證碼)
-          </p>
-        </div>
-        <hr class="border-slate-800" />
-        <div>
-          <p class="text-brand-orange font-bold text-sm mb-2">// 驗證投票資料表 (decor_votes)</p>
-          <p class="text-slate-400">
-            - `spot_id`: 外鍵關聯至 decor_spots.id (級聯刪除)<br />
-            - `voter_id`: 投票者的裝置 UUID<br />
-            - `is_upvote`: 布林值 (true 為真點，false 為雜點)<br />
-            - 聯合唯一鍵約束 (spot_id + voter_id) 防止重複寫入或人為灌票。
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
 </Layout>
