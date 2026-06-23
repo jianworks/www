@@ -1,0 +1,108 @@
+---
+// privacy.astro
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="隱私權政策 | Privacy Policy" 
+  description="川朵數位工作室及其旗下產品（Flawless、YomiYomi、皮克敏飾品地圖）的隱私權政策與服務條款，說明我們如何保護、處理並儲存使用者的個人隱私數據。"
+  keywords="隱私權政策, 川朵數位, 數據收集, 個人資料保護法, 服務條款"
+>
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+      <!-- Title -->
+      <div class="border-b border-slate-200 pb-6 mb-8">
+        <h1 class="text-3xl font-extrabold text-slate-900">隱私權政策 (Privacy Policy)</h1>
+        <p class="text-xs text-slate-400 mt-2">最近更新日期：2026 年 6 月 23 日</p>
+      </div>
+
+      <!-- Content -->
+      <div class="prose prose-slate max-w-none text-xs leading-relaxed space-y-6 text-slate-600">
+        <p>
+          歡迎使用由「川朵數位工作室」（以下簡稱「我們」或「本工作室」）開發的官方網站及旗下應用程式，包含 **Flawless**、**YomiYomi 讀讀日文新聞** 與 **皮克敏飾品地圖**（以下簡稱「本服務」）。
+        </p>
+        <p>
+          本工作室非常重視您的個人隱私。為了讓您能安心使用本服務，本隱私權政策旨在向您說明我們如何收集、使用、保護及儲存您的個人數據。當您開始使用本服務，即表示您已閱讀並同意本政策之所有內容。
+        </p>
+
+        <!-- Block 1 -->
+        <div class="space-y-2">
+          <h2 class="text-base font-bold text-slate-900 border-l-4 border-brand-mint pl-3">一、 我們收集的個人資料類型</h2>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>
+              <strong>帳戶與登入資訊</strong>：當您使用 Google / LINE 帳號登入本服務（如 Flawless 或 YomiYomi）時，我們將收集您的電子郵件地址、公開個人頭像、姓名以及唯一的帳號識別碼（Firebase UID），以建立及維護您的學習紀錄與備份。
+            </li>
+            <li>
+              <strong>裝置資訊與唯一識別碼</strong>：為防止惡意投票或多次惡意點擊回報，在「皮克敏飾品地圖」或「YomiYomi 匿名帳號」中，我們可能會記錄您裝置的匿名雜湊識別碼（如 Android 裝置 ID 雜湊值），此識別碼無法用於辨識您的真實個人身分。
+            </li>
+            <li>
+              <strong>使用者上傳之內容</strong>：
+              <br />• Flawless：我們收集您上傳的錯題圖片，以便利用 AI (Gemini OCR) 技術解析並轉換為公式與文字。
+              <br />• 皮克敏飾品地圖：我們收集您點擊回報的地標座標及所提交之遊戲截圖，以便進行圖資核對。
+            </li>
+          </ul>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="space-y-2">
+          <h2 class="text-base font-bold text-slate-900 border-l-4 border-brand-mint pl-3">二、 資料使用目的</h2>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><strong>提供並優化服務</strong>：用於辨識、保存與同步您的學習數據（如錯題本、日文生字本、已回報的地標）。</li>
+            <li><strong>AI 翻譯與解析</strong>：透過安全通道（API）將您提交的內容（如圖片、日文單字）發送給第三方 AI 引擎（如 Google Gemini API）進行解析與翻譯，其分析結果將儲存於您的私有資料庫中。</li>
+            <li><strong>維護系統安全與品質</strong>：利用裝置 UUID 限制防刷票與防止重覆回報地標，過濾不實資訊。</li>
+          </ul>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="space-y-2">
+          <h2 class="text-base font-bold text-slate-900 border-l-4 border-brand-mint pl-3">三、 資料儲存與安全性</h2>
+          <p>
+            我們採用業界標準的安全性技術來保護您的資料。所有使用者上傳的圖片均安全儲存於 Google Cloud Storage 中，並設有同源代理與嚴格的存取權限。資料庫（Supabase & Firebase Firestore）已設定嚴格的安全規則（Security Rules），只有經過驗證的帳號才能讀寫其私有資料，防止任何未授權的第三方存取。
+          </p>
+        </div>
+
+        <!-- Block 4 -->
+        <div class="space-y-2">
+          <h2 class="text-base font-bold text-slate-900 border-l-4 border-brand-mint pl-3">四、 數據分享與第三方服務</h2>
+          <p>
+            除以下情況外，我們不會向任何外部第三方出售、出租或分享您的個人資料：
+          </p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><strong>合作服務商</strong>：如 Google Firebase（身分驗證與雲端資料庫）、Supabase（地圖資料庫託管）與 Google AdMob（廣告遞送元件）。這些服務商僅在提供服務所需的必要範圍內處理資料。</li>
+            <li><strong>法律要求</strong>：當政府機關或執法單位基於司法或法令要求時，我們將配合法律程序提供必要資訊。</li>
+          </ul>
+        </div>
+
+        <!-- Block 5 -->
+        <div class="space-y-2">
+          <h2 class="text-base font-bold text-slate-900 border-l-4 border-brand-mint pl-3">五、 使用者的權利</h2>
+          <p>
+            您隨時擁有以下權利：
+          </p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>查詢、閱覽、要求提供複本或要求修正您的個人學習紀錄與資料。</li>
+            <li><strong>要求刪除帳號與資料</strong>：您可以透過 App 內的「刪除帳戶」選項，或隨時發信至本工作室的信箱，要求我們永久刪除您的帳號及其名下的所有個人資料與上傳圖片。</li>
+          </ul>
+        </div>
+
+        <!-- Block 6 -->
+        <div class="space-y-2">
+          <h2 class="text-base font-bold text-slate-900 border-l-4 border-brand-mint pl-3">六、 政策修訂</h2>
+          <p>
+            我們可能會不定期修訂本隱私權政策以反映服務變更或法律規範的調整。修訂後的條款將直接公告於本網頁，並自公告日起生效。建議您定期閱讀本頁面以了解最新的隱私實務。
+          </p>
+        </div>
+
+        <!-- Block 7 -->
+        <div class="space-y-2">
+          <h2 class="text-base font-bold text-slate-900 border-l-4 border-brand-mint pl-3">七、 聯絡我們</h2>
+          <p>
+            如果您對本隱私權政策有任何疑問，或希望提出資料刪除之請求，請透過以下電子信箱與我們聯繫：
+            <br /><strong class="text-slate-800">電子信箱：</strong><a href="mailto:cs.jian@triodose.com" class="text-yomi-blue font-semibold hover:underline">cs.jian@triodose.com</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>
