@@ -1,0 +1,195 @@
+---
+// products/yomiyomi.astro
+import Layout from '../../layouts/Layout.astro';
+import InteractiveYomi from '../../components/InteractiveYomi.astro';
+---
+
+<Layout 
+  title="YomiYomi 讀讀日文新聞 | AI 日文閱讀神器"
+  description="YomiYomi 首創彩色語意句法與敬常體一鍵切換，結合 Gemini 自適應教學引擎。專為 JLPT 考生與中高級日語學習者打造，讀懂日本，不止讀懂新聞。"
+  keywords="YomiYomi, 日文新聞, JLPT 讀解, 動詞變化還原, 丁寧體常體切換, 日語學習App"
+>
+  <!-- Hero Section in Japanese Washi Paint Theme -->
+  <section class="relative bg-gradient-to-b from-[#faf9f6] to-[#eae9e6] text-slate-900 py-20 border-b border-slate-200">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(74,111,165,0.08),transparent_50%)]"></div>
+    
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left info -->
+        <div class="lg:col-span-7 space-y-6">
+          <span class="inline-flex items-center gap-1.5 rounded-full bg-yomi-blue/10 px-3 py-1 text-xs font-semibold text-yomi-blue border border-yomi-blue/20">
+            🇯🇵 AI 驅動的日文分級閱讀與句法分析器
+          </span>
+          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
+            讀懂日本，<br />
+            <span class="text-yomi-blue">不止讀懂新聞。</span>
+          </h1>
+          <p class="text-base text-slate-600 leading-relaxed max-w-xl">
+            <strong>YomiYomi</strong> 首創「彩色語意句法」與「敬常體一鍵切換」的 AI 日文閱讀神器。由翠歐科技工作室 (Triodose Studio) 獨立開發，結合 Gemini 自適應教學引擎，專為中高級學習者與 JLPT 考生打造。
+          </p>
+          
+          <div class="flex flex-wrap gap-4 pt-2">
+            <!-- Google Play button -->
+            <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-yomi-blue text-white px-5 py-3 text-xs font-bold shadow-md hover:bg-slate-800 transition-all hover:scale-105">
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24">
+                <path d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M17.5,12L8,6.5V17.5L17.5,12Z" />
+              </svg>
+              Google Play 免費下載
+            </a>
+            <!-- Web free trial -->
+            <a href="#simulator" class="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white text-slate-700 px-5 py-3 text-xs font-bold hover:bg-slate-50 transition-all">
+              💻 Web 免費試用版
+            </a>
+          </div>
+          
+          <p class="text-[11px] text-slate-400 font-medium">
+            💡 結合 AI 新聞每日生成技術，提供 N5 / N3 / N1 三種自適應難度。
+          </p>
+        </div>
+
+        <!-- Right App mockup -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-[280px] aspect-[9/19] rounded-[40px] border-[8px] border-slate-900 bg-slate-950 shadow-2xl overflow-hidden">
+            <img src="/images/yomiyomi/YomiYomi-1.png" alt="YomiYomi App" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Simulator Section -->
+  <section id="simulator" class="py-16 bg-slate-950 text-white relative">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 class="text-3xl font-bold tracking-tight">體驗 YomiYomi 四大核心體驗</h2>
+        <p class="mt-3 text-slate-400 text-sm leading-relaxed">
+          不用下載，在下方直接試用我們的互動式新聞閱讀器 Mockup。您可以點擊任何單字、切換拼音、或一鍵切換敬體與常體。
+        </p>
+      </div>
+      
+      <InteractiveYomi />
+    </div>
+  </section>
+
+  <!-- Core Features Grid -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold text-slate-900">四大核心技術展示 (Core Features)</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Feature 1 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
+          <div class="text-2xl mb-3">🎨</div>
+          <h3 class="text-lg font-bold text-slate-900">語意結構彩色視覺化 (Color Syntax)</h3>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            自動將句子中的主語 (<span class="text-blue-600 font-semibold">主詞</span>) 標記為深藍、賓語 (<span class="text-amber-600 font-semibold">受詞</span>) 標記為麥穗金、助詞 (<span class="text-slate-400 font-semibold">格助詞</span>) 標記為灰色。助你快速理清日文句型主賓關係，閱讀速度提升 200%。
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
+          <div class="text-2xl mb-3">🔄</div>
+          <h3 class="text-lg font-bold text-slate-900">敬/常體一鍵切換 (Style Toggle)</h3>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            獨創文章一鍵變速！同一篇新聞，可一鍵在正式的丁寧體（です/ます）與口語普通形（常體）之間切換，全面對齊你的日語口語與聽力語感。
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
+          <div class="text-2xl mb-3">🎯</div>
+          <h3 class="text-lg font-bold text-slate-900">智慧三態注音 (Adaptive Furigana)</h3>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            厭倦了滿螢幕假名干擾視線？設定你的 JLPT 目標等級，系統會智慧隱藏你已掌握的簡單單字假名，僅在陌生生字上方標注讀音，培養最自然的閱讀直覺。
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-md transition-all">
+          <div class="text-2xl mb-3">📖</div>
+          <h3 class="text-lg font-bold text-slate-900">一鍵動態文法字典 (Grammar Analyzer)</h3>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            遇到「搭載されており」卡住了？不用再去查字典。一鍵點擊直接帶出動詞原形「搭載する」，並拆解被動、使役、連接形等文法演變路徑，文法結構一目了然。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Screenshot Gallery -->
+  <section class="py-16 bg-[#faf9f6] border-t border-b border-slate-200">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold text-slate-900">真實 App 介面展示</h2>
+        <p class="text-slate-500 text-sm mt-2">簡約清爽的現代日式風格，融合毛玻璃微光視覺設計。</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center items-center max-w-4xl mx-auto">
+        <div class="flex flex-col items-center bg-white p-4 rounded-3xl border border-slate-200 shadow-sm">
+          <img src="/images/yomiyomi/YomiYomi-1.png" alt="YomiYomi 漢字注音切換" class="rounded-2xl w-full h-auto max-w-[220px] shadow-md border border-slate-100" />
+          <p class="mt-4 text-xs font-semibold text-slate-700">【智慧注音】自訂漢字拼音顯示</p>
+        </div>
+        <div class="flex flex-col items-center bg-white p-4 rounded-3xl border border-slate-200 shadow-sm">
+          <img src="/images/yomiyomi/YomiYomi-2.png" alt="YomiYomi 動態詞性解析" class="rounded-2xl w-full h-auto max-w-[220px] shadow-md border border-slate-100" />
+          <p class="mt-4 text-xs font-semibold text-slate-700">【語意分析】單字詞性與翻譯</p>
+        </div>
+        <div class="flex flex-col items-center bg-white p-4 rounded-3xl border border-slate-200 shadow-sm">
+          <img src="/images/yomiyomi/YomiYomi-3.png" alt="YomiYomi 日文生字本" class="rounded-2xl w-full h-auto max-w-[220px] shadow-md border border-slate-100" />
+          <p class="mt-4 text-xs font-semibold text-slate-700">【生字複習】上下文情境語境還原</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Target Audience -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-900">你是哪一種日語學習者？</h2>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Target A -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col md:flex-row gap-4 items-start">
+          <div class="bg-yomi-blue/10 text-yomi-blue font-bold px-3 py-1.5 rounded-xl text-sm flex-shrink-0">
+            JLPT 備考考生 (N5 ~ N1)
+          </div>
+          <div class="space-y-2">
+            <p class="text-xs text-slate-500 italic">「模擬題好無聊，單字背了就忘，遇到沒看過的長句讀解就卡關...」</p>
+            <p class="text-xs text-slate-700 leading-relaxed font-semibold">
+              👉 YomiYomi 方案：每日新鮮生成的日本熱門時事新聞，提供 N5 / N3 / N1 三種自適應難度，結合生字本上下文情境還原，在閱讀中自然記住單字。
+            </p>
+          </div>
+        </div>
+
+        <!-- Target B -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col md:flex-row gap-4 items-start">
+          <div class="bg-yomi-blue/10 text-yomi-blue font-bold px-3 py-1.5 rounded-xl text-sm flex-shrink-0">
+            動漫與日劇愛好者
+          </div>
+          <div class="space-y-2">
+            <p class="text-xs text-slate-500 italic">「課本上學的都是 です/ます（敬體），看動漫聽台詞都是常體，根本接不上...」</p>
+            <p class="text-xs text-slate-700 leading-relaxed font-semibold">
+              👉 YomiYomi 方案：提供敬/常體一鍵對照功能。看報紙學正式敬體表達，點擊切換立刻對齊動漫、日常對話的口語（常體）邏輯。
+            </p>
+          </div>
+        </div>
+
+        <!-- Target C -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col md:flex-row gap-4 items-start">
+          <div class="bg-yomi-blue/10 text-yomi-blue font-bold px-3 py-1.5 rounded-xl text-sm flex-shrink-0">
+            日企上班族 / 留學生
+          </div>
+          <div class="space-y-2">
+            <p class="text-xs text-slate-500 italic">「日本工作信件或新聞長句太多，助詞夾雜，花好久時間才讀懂一段話...」</p>
+            <p class="text-xs text-slate-700 leading-relaxed font-semibold">
+              👉 YomiYomi 方案：語意結構彩色標記，一眼抓出誰（主詞）對誰（受詞）做了什麼事，迅速拆解日企信件與商務新聞結構。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

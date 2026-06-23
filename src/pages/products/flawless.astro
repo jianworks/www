@@ -1,0 +1,249 @@
+---
+// products/flawless.astro
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Flawless 錯題救星 | AI 理科錯題複習系統"
+  description="Flawless 結合最先進的 AI 技術與間隔重複 (SRS) 記憶法，拍照上傳即可將理科錯題（數理化）轉為 LaTeX 公式，並動態生成相似類題，戳破你的學習盲點！"
+  keywords="Flawless, 錯題本, AI 錯題, 間隔重複, 108課綱, 數理化複習, 線上學習工具"
+>
+  <!-- Hero Section -->
+  <section class="relative bg-slate-900 text-white overflow-hidden py-20">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(86,227,159,0.12),transparent_50%)]"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/90 z-0"></div>
+    
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left text info -->
+        <div class="lg:col-span-7 space-y-6">
+          <span class="inline-flex items-center gap-1.5 rounded-full bg-brand-mint/10 px-3 py-1 text-xs font-semibold text-brand-mint border border-brand-mint/20">
+            ✨ AI 智能間隔重複複習系統
+          </span>
+          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+            「別在同一個坑裡<br /><span class="bg-gradient-to-r from-brand-mint via-brand-yellow to-brand-orange bg-clip-text text-transparent">摔倒兩次！</span>」
+          </h1>
+          <p class="text-lg text-slate-300 leading-relaxed">
+            高中理科公式繁雜、計算多變，每次寫錯題目，抄在筆記本上費時費力？<br />
+            <strong>Flawless</strong> 專為高中生量身打造，結合認知科學與 AI，不只幫你整理錯題，更用 AI 動態為你設計具備「常見計算陷阱」的相似類題，精準戳破學習盲點！
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#" class="inline-flex items-center justify-center rounded-full bg-brand-mint px-6 py-3 text-sm font-bold text-slate-900 shadow-sm transition-all duration-300 hover:bg-white hover:scale-105">
+              立即免費體驗
+            </a>
+            <a href="#features" class="inline-flex items-center justify-center rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-300 transition-all hover:bg-slate-800">
+              了解功能特色
+            </a>
+          </div>
+        </div>
+
+        <!-- Right image mockup -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto w-full max-w-[290px] aspect-[9/19] rounded-[40px] border-[8px] border-slate-800 shadow-2xl overflow-hidden bg-slate-950">
+            <img src="/images/flawless/Screenshot 2026-06-23 100739.png" alt="Flawless App Screenshot" class="w-full h-full object-cover" />
+          </div>
+          <!-- Decorative circle background -->
+          <div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-brand-mint/10 filter blur-3xl"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values -->
+  <section class="py-16 bg-white border-b border-slate-100">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold text-slate-900">為什麼選擇 Flawless？四大核心學習價值</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Value 1 -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center space-y-3">
+          <div class="mx-auto h-12 w-12 rounded-full bg-brand-mint/10 flex items-center justify-center text-brand-mint font-bold text-lg">
+            📷
+          </div>
+          <h3 class="font-bold text-slate-900">隨手拍，免抄題</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            手機拍照隨手上傳，AI 自動將題目轉為精美排版的 LaTeX 公式，免去繁瑣的抄題時間。
+          </p>
+        </div>
+
+        <!-- Value 2 -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center space-y-3">
+          <div class="mx-auto h-12 w-12 rounded-full bg-brand-yellow/10 flex items-center justify-center text-brand-yellow font-bold text-lg">
+            🧮
+          </div>
+          <h3 class="font-bold text-slate-900">AI 相似類題</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            不讓你死記原題答案！AI 每次都會動態生成觀念與難度完全一致的全新類題，驗證你是否真正理解。
+          </p>
+        </div>
+
+        <!-- Value 3 -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center space-y-3">
+          <div class="mx-auto h-12 w-12 rounded-full bg-brand-orange/10 flex items-center justify-center text-brand-orange font-bold text-lg">
+            🧠
+          </div>
+          <h3 class="font-bold text-slate-900">診斷計算陷阱</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            每個錯誤選項都是 AI 精心設計的「經典計算錯誤或觀念混淆結果」，作答時一併指出你「踩了什麼坑」。
+          </p>
+        </div>
+
+        <!-- Value 4 -->
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center space-y-3">
+          <div class="mx-auto h-12 w-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-500 font-bold text-lg">
+            🔄
+          </div>
+          <h3 class="font-bold text-slate-900">SRS 智能排程</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            結合 1-3-7-14-30天 智能記憶排程，答對自動延後複習，答錯重置高頻挑戰，用最少時間達成最牢記憶。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Screenshot Gallery -->
+  <section class="py-16 bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold text-slate-900">產品實際畫面 (App Screen Gallery)</h2>
+        <p class="mt-3 text-slate-500 text-sm">採用高質感毛玻璃 UI 與自適應佈局，在各種裝置上皆有極佳體驗。</p>
+      </div>
+
+      <!-- Screenshot layout -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center items-center max-w-5xl mx-auto">
+        <div class="flex flex-col items-center bg-white p-4 rounded-3xl border border-slate-200/60 shadow-sm">
+          <img src="/images/flawless/Screenshot 2026-06-23 100643.png" alt="Flawless 登入與題目清單" class="rounded-2xl w-full h-auto max-w-[260px] shadow-md border border-slate-100" />
+          <p class="mt-4 text-xs font-semibold text-slate-700">【錯題列表】課綱卷冊自動歸檔</p>
+        </div>
+        <div class="flex flex-col items-center bg-white p-4 rounded-3xl border border-slate-200/60 shadow-sm">
+          <img src="/images/flawless/Screenshot 2026-06-23 100707.png" alt="Flawless AI 相似題生成" class="rounded-2xl w-full h-auto max-w-[260px] shadow-md border border-slate-100" />
+          <p class="mt-4 text-xs font-semibold text-slate-700">【相似演練】AI 即時生成動態類題</p>
+        </div>
+        <div class="flex flex-col items-center bg-white p-4 rounded-3xl border border-slate-200/60 shadow-sm">
+          <img src="/images/flawless/Screenshot 2026-06-23 100739.png" alt="Flawless 題目詳情與解析" class="rounded-2xl w-full h-auto max-w-[260px] shadow-md border border-slate-100" />
+          <p class="mt-4 text-xs font-semibold text-slate-700">【踩坑警示】選項計算陷阱診斷</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Features -->
+  <section id="features" class="py-16 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold text-slate-900">十大智能功能亮點</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="p-6 border border-slate-100 rounded-2xl hover:shadow-md transition-shadow">
+          <h4 class="font-bold text-slate-900 flex items-center gap-2">
+            <span>📷</span> 拍照即辨：AI OCR 解析
+          </h4>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            自動將題目圖片轉為印刷級 LaTeX 數學與化學公式（支援 KaTeX & mhchem），並將手寫草稿或表格完美轉換為高可讀性 Markdown 結構。
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-6 border border-slate-100 rounded-2xl hover:shadow-md transition-shadow">
+          <h4 class="font-bold text-slate-900 flex items-center gap-2">
+            <span>📚</span> 課綱對照：卷冊章節自動判定
+          </h4>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            AI 自動辨識錯題學科（數學、物理、化學），並比對最新 108 課綱判定所屬卷冊與主題，讓錯題庫井然有序。
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="p-6 border border-slate-100 rounded-2xl hover:shadow-md transition-shadow">
+          <h4 class="font-bold text-slate-900 flex items-center gap-2">
+            <span>🧠</span> 類題生成：動態相似題演練
+          </h4>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            每次點擊複習，AI 會根據錯題知識點，即時生成一道難度、公式相同但數據不同的全新相似題，拒絕背答案的無效學習。
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="p-6 border border-slate-100 rounded-2xl hover:shadow-md transition-shadow">
+          <h4 class="font-bold text-slate-900 flex items-center gap-2">
+            <span>🔍</span> 踩坑警示：選項計算陷阱診斷
+          </h4>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            AI 為每個選項設計常犯計算盲點（如忘記平衡係數、正負號反轉），答題後提供踩坑對比解析，讓你在考試中自動避雷。
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="p-6 border border-slate-100 rounded-2xl hover:shadow-md transition-shadow">
+          <h4 class="font-bold text-slate-900 flex items-center gap-2">
+            <span>📐</span> 動態 SVG 圖形：幾何與力學繪圖
+          </h4>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            幾何、三角函數、物理力學等需要圖示說明的題目，AI 出題時會動態生成精美的 SVG 向量圖形（包含座標軸、半透明著色區等輔助線）。
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="p-6 border border-slate-100 rounded-2xl hover:shadow-md transition-shadow">
+          <h4 class="font-bold text-slate-900 flex items-center gap-2">
+            <span>⏳</span> 間隔重複 (SRS)：智能記憶排程
+          </h4>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            將複習排程分為 Stage 1 至 Stage 5（間隔分別為 1, 3, 7, 14, 30 天）。答對題目將晉升下一階段，一旦答錯重置回第一階段。
+          </p>
+        </div>
+
+        <!-- Feature 7 -->
+        <div class="p-6 border border-slate-100 rounded-2xl hover:shadow-md transition-shadow">
+          <h4 class="font-bold text-slate-900 flex items-center gap-2">
+            <span>📊</span> 每日複習上限與智能優先級
+          </h4>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            自訂「每日複習上限數」，利用智能優先權演算法（綜合逾期率、上次答錯加權），每天自動挑選最緊急、最關鍵的錯題供你練習。
+          </p>
+        </div>
+
+        <!-- Feature 8 -->
+        <div class="p-6 border border-slate-100 rounded-2xl hover:shadow-md transition-shadow">
+          <h4 class="font-bold text-slate-900 flex items-center gap-2">
+            <span>💡</span> 雙重輔助：啟發提示與一鍵詳解
+          </h4>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            解題卡關時可點擊「啟發式提示」，獲取不透漏答案的引導思維；若無頭緒可一鍵查看完整步驟式詳解並自動記錄為答錯。
+          </p>
+        </div>
+
+        <!-- Feature 9 -->
+        <div class="p-6 border border-slate-100 rounded-2xl hover:shadow-md transition-shadow">
+          <h4 class="font-bold text-slate-900 flex items-center gap-2">
+            <span>📱</span> 高顏值毛玻璃 UI 與自適應佈局
+          </h4>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            全站採用溫潤極簡白與輕透毛玻璃（Glassmorphism）的現代設計美學。支援「卡片網格」與「列表表格」雙視圖隨心切換。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-slate-900 text-white text-center relative overflow-hidden border-t border-slate-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-3xl space-y-6">
+      <h2 class="text-3xl font-bold">開啟你的理科高效學習革命！</h2>
+      <p class="text-slate-400 text-sm leading-relaxed">
+        「錯題不再是挫折，而是你高分的墊腳石。」<br />
+        只要一個 Google 帳號，隨手一拍，讓 AI 成為你的 24 小時專屬理科家教，伴你戰勝所有考試陷阱！
+      </p>
+      <div class="pt-4">
+        <a href="#" class="inline-flex items-center justify-center rounded-full bg-brand-mint px-8 py-3.5 text-sm font-bold text-slate-900 shadow-md transition-all duration-300 hover:bg-white hover:scale-105">
+          立刻使用 Google 帳號登入
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

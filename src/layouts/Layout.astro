@@ -1,0 +1,51 @@
+---
+// Layout.astro
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  keywords?: string;
+}
+
+const { 
+  title, 
+  description = "川朵數位 (Triodose Digital Studio) 專注於為大眾與學生提供「輕鬆、遊戲化、有溫度」的學習與生活工具的獨立軟體開發工作室。", 
+  keywords = "川朵數位, Triodose Digital, 獨立開發工作室, App 開發, 錯題本, 日文學習, 皮克敏飾品地圖"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>{title} | 川朵數位 Triodose Digital</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="flex flex-col min-h-screen bg-slate-50 text-slate-800 antialiased selection:bg-brand-mint selection:text-slate-900">
+    <!-- Navigation Bar -->
+    <Navbar />
+
+    <!-- Page Content -->
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <Footer />
+  </body>
+</html>

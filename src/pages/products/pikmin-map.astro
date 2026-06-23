@@ -1,0 +1,195 @@
+---
+// products/pikmin-map.astro
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout 
+  title="皮克敏飾品地圖 | Pikmin Bloom Decor Map"
+  description="皮克敏飾品地圖是一款專為 Pikmin Bloom 玩家打造的定位回報與查詢 App。提供 100% 命中「純點」地圖、混合式查詢路由與群眾防刷投票驗證，助你快速收集 43 種裝飾皮克敏。"
+  keywords="皮克敏飾品地圖, Pikmin Bloom, 純點地圖, Overpass API, 飾品雷達, 地圖回報工具"
+>
+  <!-- Hero Section -->
+  <section class="relative bg-slate-900 text-white overflow-hidden py-20">
+    <!-- Dark green/blue radial gradient representation -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(242,140,110,0.1),transparent_50%)]"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/90 z-0"></div>
+    
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left info -->
+        <div class="lg:col-span-7 space-y-6">
+          <span class="inline-flex items-center gap-1.5 rounded-full bg-brand-orange/10 px-3 py-1 text-xs font-semibold text-brand-orange border border-brand-orange/20">
+            🍁 專為 Pikmin Bloom 玩家設計的社群地圖
+          </span>
+          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+            雷達不再踩雷，<br />
+            <span class="bg-gradient-to-r from-brand-orange to-brand-yellow bg-clip-text text-transparent">百分百「純點」一擊必中！</span>
+          </h1>
+          <p class="text-base text-slate-300 leading-relaxed">
+            還在漫無目的地尋找裝飾皮克敏嗎？<br />
+            <strong>皮克敏飾品地圖</strong> 幫您精準鎖定周圍 43 種裝飾品點位，快速篩選麵包店、咖啡店、火車站、機場、電影院等座標。與全球玩家一起回報並投票驗證 100% 命中的「純點」，快速完成您的皮克敏圖鑑！
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#" class="inline-flex items-center justify-center rounded-xl bg-brand-orange px-6 py-3 text-xs font-bold text-white shadow-md hover:bg-white hover:text-slate-900 transition-all hover:scale-105">
+              Android 版免費下載 (Google Play)
+            </a>
+            <a href="#specifications" class="inline-flex items-center justify-center rounded-xl border border-slate-700 px-6 py-3 text-xs font-semibold text-slate-300 hover:bg-slate-800 transition-colors">
+              技術規格與功能
+            </a>
+          </div>
+        </div>
+
+        <!-- Right mockup -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-[280px] aspect-[9/19] rounded-[40px] border-[8px] border-slate-800 bg-slate-950 shadow-2xl overflow-hidden">
+            <img src="/images/pikmin/Screenshot_tw_1.png" alt="皮克敏飾品地圖畫面" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slogans and Core Values -->
+  <section class="py-12 bg-white border-b border-slate-100">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="max-w-2xl mx-auto space-y-2">
+        <p class="text-lg font-medium text-slate-600">
+          「開車尋寶、散步採集，您的皮克敏最佳導航伴侶。」
+        </p>
+        <p class="text-xs text-slate-400">
+          結合 OpenStreetMap (OSM) 圖資與群眾外包力量，提供最具公信力的探知機定位指南。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots Gallery -->
+  <section class="py-16 bg-slate-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold text-slate-900">實機操作畫面</h2>
+        <p class="text-slate-500 text-sm mt-2">地圖支援拖曳、縮放與聚合 (Clustering)，高解析度圖標讓收集狀況一目了然。</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center items-center max-w-4xl mx-auto">
+        <div class="flex flex-col items-center bg-white p-4 rounded-3xl border border-slate-200 shadow-sm">
+          <img src="/images/pikmin/Screenshot_tw_1.png" alt="地圖主介面" class="rounded-2xl w-full h-auto max-w-[220px] shadow-md border border-slate-100" />
+          <p class="mt-4 text-xs font-semibold text-slate-700">【地圖篩選】高達 43 種飾品快速分類</p>
+        </div>
+        <div class="flex flex-col items-center bg-white p-4 rounded-3xl border border-slate-200 shadow-sm">
+          <img src="/images/pikmin/Screenshot_tw_2.png" alt="大範圍搜尋列表" class="rounded-2xl w-full h-auto max-w-[220px] shadow-md border border-slate-100" />
+          <p class="mt-4 text-xs font-semibold text-slate-700">【大範圍搜尋】依照距離精準排序</p>
+        </div>
+        <div class="flex flex-col items-center bg-white p-4 rounded-3xl border border-slate-200 shadow-sm">
+          <img src="/images/pikmin/Screenshot_tw_3.png" alt="飾品點回報" class="rounded-2xl w-full h-auto max-w-[220px] shadow-md border border-slate-100" />
+          <p class="mt-4 text-xs font-semibold text-slate-700">【社群回報】玩家現場精準定位與確認</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Specifications -->
+  <section id="specifications" class="py-16 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-900">核心功能技術規格</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Spec 1 -->
+        <div class="space-y-2">
+          <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <span class="text-brand-orange">✓</span> 離線地理區域判定 (Offline Region Detection)
+          </h3>
+          <p class="text-xs text-slate-500 leading-relaxed pl-6">
+            內建 `RegionDetector` 單例，使用精簡的 Bounding Box 離線演算法判定當前經緯度所屬區域（台灣、日本等）。0 毫秒延遲，不耗網路流量，自動攔截日本限定「神社/寺廟」等在非日本區的無效搜尋。
+          </p>
+        </div>
+
+        <!-- Spec 2 -->
+        <div class="space-y-2">
+          <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <span class="text-brand-orange">✓</span> 混合式圖資查詢路由 (Hybrid Query Routing)
+          </h3>
+          <p class="text-xs text-slate-500 leading-relaxed pl-6">
+            一般查詢即時呼叫 Overpass API 獲取 OSM 地標。稀有飾品大半徑查詢時，台灣地區自動路由至 Supabase 後端快取資料表（`cached_rare_pois`），提供毫秒級反應，避開 Overpass 查詢易發生的 15 秒連線逾時。
+          </p>
+        </div>
+
+        <!-- Spec 3 -->
+        <div class="space-y-2">
+          <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <span class="text-brand-orange">✓</span> Overpass 穩定性最佳化與故障轉移
+          </h3>
+          <p class="text-xs text-slate-500 leading-relaxed pl-6">
+            內建 100 公尺距離 Geocaching 快取，減少重複 API 請求。配置 4 台全球免費 Overpass API 鏡像伺服器，遇連線逾時或 429 錯誤時，系統自動輪詢並切換至下一台備用伺服器。
+          </p>
+        </div>
+
+        <!-- Spec 4 -->
+        <div class="space-y-2">
+          <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <span class="text-brand-orange">✓</span> 社群「純點」回報與 OSM 反向驗證
+          </h3>
+          <p class="text-xs text-slate-500 leading-relaxed pl-6">
+            當玩家回報「此處為純點（單一特定飾品 100% 命中點）」時，App 背景會即時向 Overpass API 驗證該位置方圓 100 公尺內是否存有符合該類別的真實圖資標籤，確保數據品質，防呆防錯。
+          </p>
+        </div>
+
+        <!-- Spec 5 -->
+        <div class="space-y-2">
+          <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <span class="text-brand-orange">✓</span> 群眾驗證投票與品質控管
+          </h3>
+          <p class="text-xs text-slate-500 leading-relaxed pl-6">
+            玩家可對純點點擊「是真的 (Upvote)」或「有雜點 (Downvote)」。利用 Android 裝置 ID 雜湊生成 UUID，每台裝置針對同個純點終身僅能投票一次。當累計投票達 5 次且評分低於 40% 時，地圖會自動隱藏該點。
+          </p>
+        </div>
+
+        <!-- Spec 6 -->
+        <div class="space-y-2">
+          <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <span class="text-brand-orange">✓</span> 大範圍探索與多語系支援
+          </h3>
+          <p class="text-xs text-slate-500 leading-relaxed pl-6">
+            支援 5 公里到 50 公里半徑內搜尋已回報的純點，結果依距離由近到遠精確排序，點擊即可流暢平移地圖定位。App 完整支援繁體中文（zh-rTW）、英文（en-US）與日文（ja-JP）。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Database Schema Tech Info -->
+  <section class="py-16 bg-slate-900 text-white border-t border-slate-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl font-bold">後端資料庫架構 (Supabase / PostgreSQL)</h2>
+        <p class="text-slate-400 text-xs mt-2">空間地理資料庫 PostGIS 核心欄位配置</p>
+      </div>
+
+      <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 overflow-x-auto text-xs font-mono space-y-4">
+        <div>
+          <p class="text-brand-orange font-bold text-sm mb-2">// 裝飾品點位資料表 (decor_spots)</p>
+          <p class="text-slate-400">
+            - `latitude`, `longitude`: 經緯度座標雙精度浮點數<br />
+            - `geom`: geometry (Point, 4326) PostGIS 空間地理座標點（綁定 GIST 索引提供快速空間查詢）<br />
+            - `decor_type`: 飾品代碼 (如: "restaurant", "cafe")<br />
+            - `score`: 當前純點準確百分比 (預設 100)<br />
+            - `vote_count`: 總投票次數 (預設 0)<br />
+            - `reporter_id`: 回報者的裝置 UUID (防刷唯一驗證碼)
+          </p>
+        </div>
+        <hr class="border-slate-800" />
+        <div>
+          <p class="text-brand-orange font-bold text-sm mb-2">// 驗證投票資料表 (decor_votes)</p>
+          <p class="text-slate-400">
+            - `spot_id`: 外鍵關聯至 decor_spots.id (級聯刪除)<br />
+            - `voter_id`: 投票者的裝置 UUID<br />
+            - `is_upvote`: 布林值 (true 為真點，false 為雜點)<br />
+            - 聯合唯一鍵約束 (spot_id + voter_id) 防止重複寫入或人為灌票。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
