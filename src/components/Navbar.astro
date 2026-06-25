@@ -2,7 +2,8 @@
 // Navbar.astro
 const currentPath = Astro.url.pathname;
 const isHome = currentPath === '/' || currentPath === '/index.html';
-const isProducts = currentPath.startsWith('/products');
+const isFlawless = currentPath.startsWith('/products/flawless');
+const isProducts = currentPath === '/products' || currentPath === '/products/' || currentPath.startsWith('/products/yomiyomi') || currentPath.startsWith('/products/pikmin-map');
 const isPrivacy = currentPath.startsWith('/privacy');
 ---
 
@@ -26,10 +27,16 @@ const isPrivacy = currentPath.startsWith('/privacy');
           首頁
         </a>
         <a 
+          href="/products/flawless" 
+          class={`text-sm font-medium transition-colors hover:text-brand-mint ${isFlawless ? 'text-slate-900 border-b-2 border-brand-mint pb-1' : 'text-slate-500'}`}
+        >
+          Flawless 錯題救星
+        </a>
+        <a 
           href="/products" 
           class={`text-sm font-medium transition-colors hover:text-brand-mint ${isProducts ? 'text-slate-900 border-b-2 border-brand-mint pb-1' : 'text-slate-500'}`}
         >
-          產品介紹
+          精選 App
         </a>
         <a 
           href="/privacy" 
@@ -82,10 +89,16 @@ const isPrivacy = currentPath.startsWith('/privacy');
         首頁
       </a>
       <a 
+        href="/products/flawless" 
+        class={`block rounded-md px-3 py-2 text-base font-medium ${isFlawless ? 'bg-slate-50 text-slate-950 font-semibold' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-950'}`}
+      >
+        Flawless 錯題救星
+      </a>
+      <a 
         href="/products" 
         class={`block rounded-md px-3 py-2 text-base font-medium ${isProducts ? 'bg-slate-50 text-slate-950 font-semibold' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-950'}`}
       >
-        產品介紹
+        精選 App
       </a>
       <a 
         href="/privacy" 
