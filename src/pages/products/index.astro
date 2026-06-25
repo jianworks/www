@@ -5,16 +5,6 @@ import ProductCard from '../../components/ProductCard.astro';
 
 const products = [
   {
-    title: "Flawless 錯題救星",
-    subtitle: "AI 智能理科間隔重複複習系統",
-    description: "隨手拍照免抄題，AI 自動將題目轉為精美 LaTeX 公式。結合間隔重複記憶法（SRS），動態生成具備計算陷阱的相似類題，戳破學習盲點，比真人助教更懂你！",
-    tag: "AI 智能 & Web",
-    tagColor: "bg-brand-mint/15 text-emerald-700",
-    link: "/products/flawless",
-    imageSrc: "/images/flawless/Screenshot 2026-06-23 100739.png",
-    slogan: "別在同一個坑裡摔倒兩次！"
-  },
-  {
     title: "YomiYomi 讀讀日文新聞",
     subtitle: "AI 驅動的日文分級閱讀與句法分析器",
     description: "每日抓取日本時事新聞，由 AI 自動改寫為 N5/N3/N1 分級文章。獨創彩色語意結構標記、敬常體一鍵切換、智慧假名拼音顯示與一鍵動態動詞還原，讀出日文直覺！",
@@ -38,9 +28,9 @@ const products = [
 ---
 
 <Layout 
-  title="工作室產品總覽" 
-  description="川朵數位精緻軟體工具列表：Flawless 理科錯題系統、YomiYomi 日文學習 App、皮克敏飾品地圖。以遊戲化、有溫度的介面解決您的真實生活痛點。"
-  keywords="Flawless, YomiYomi, 皮克敏飾品地圖, 川朵數位, App產品列表, 線上學習工具"
+  title="精選 App | 川朵數位" 
+  description="川朵數位精緻軟體 App 列表：YomiYomi 日文學習 App、皮克敏飾品地圖。以遊戲化、有溫度的介面解決您的真實生活痛點。"
+  keywords="YomiYomi, 皮克敏飾品地圖, 川朵數位, App產品列表, 行動學習工具"
 >
   <!-- Hero Section -->
   <section class="relative bg-slate-900 text-white overflow-hidden py-16">
@@ -49,7 +39,7 @@ const products = [
     
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
       <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
-        探索 <span class="bg-gradient-to-r from-brand-mint via-brand-yellow to-brand-orange bg-clip-text text-transparent">川朵數位</span> 的創意工具
+        探索 <span class="bg-gradient-to-r from-brand-mint via-brand-yellow to-brand-orange bg-clip-text text-transparent">川朵數位</span> 的精選 App
       </h1>
       <p class="mt-4 text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
         我們不只打造好用的軟體，更融入「輕遊戲化」與「人性化體驗」，讓學習與生活工具變得有溫度、有趣且無壓力。
@@ -59,7 +49,7 @@ const products = [
 
   <!-- Product Grid -->
   <section class="py-16 container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto gap-8">
       {products.map(p => (
         <ProductCard {...p} />
       ))}
